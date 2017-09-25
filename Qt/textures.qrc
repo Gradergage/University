@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/textures">
+        <file>icon.jpg</file>
+        <file>BackgroundGame.jpg</file>
+        <file>BackgroundMenu.jpg</file>
+    </qresource>
+</RCC>

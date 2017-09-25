@@ -1,0 +1,128 @@
+/**
+ * Created by Gradergage on 12.05.2016.
+ */
+public class Tree.Node <K extends Comparable, V> {
+
+    enum Values.Colors{RED,BLACK};
+    private Values.Colors color;
+    private K key;
+    private V value;
+    private Tree.Node left;
+    private Tree.Node right;
+    private Tree.Node parent;
+
+    Tree.Node() {
+        color = RED;
+    }
+
+    Tree.Node(K tempK,V tempV) {
+        color = RED;
+        key = tempK;
+        value=tempV;
+        left = null;
+        right = null;
+        parent = null;
+    }
+
+    String getColor() {
+        return color;
+    }
+
+
+    K getKey() {
+        if (this == null) {
+            return null;
+        }
+        return key;
+    }
+    V getValue()
+    {
+        if (this == null) {
+            return null;
+        }
+        return value;
+    }
+
+    Tree.Node getLeft() {
+        return left;
+    }
+
+    Tree.Node getRight() {
+        return right;
+    }
+
+    Tree.Node getParent() {
+        return parent;
+    }
+
+
+    //Родитель родительского элемента
+    Tree.Node getGrandparent() {
+        if (this.getParent() != null) {
+            return this.getParent().getParent();
+        } else {
+            return null;
+        }
+    }
+
+    //Брат родительского элемента
+    Tree.Node getUncle() {
+        if (this.getGrandparent() != null) {
+            if (this.getGrandparent().getLeft() == this) {
+                return this.getGrandparent().getRight();
+            } else {
+                return this.getGrandparent().getLeft();
+            }
+        } else {
+            return null;
+        }
+
+    }
+
+    void setLeft(Tree.Node temp) {
+        left = temp;
+    }
+
+    void setRight(Tree.Node temp) {
+        right = temp;
+    }
+
+    void setParent(Tree.Node temp) {
+        parent = temp;
+    }
+
+    void setColor(String temp) {
+        color = temp;
+    }
+
+    void setKey(K temp) {
+        key = temp;
+    }
+    void setValue(V temp) {
+        value = temp;
+    }
+
+    void show() {
+        System.out.println(this.getColor() + " " + this.getKey());
+    }
+
+    void showLeftRightColor() {
+        System.out.println("/      \\");
+        try {
+            getLeft().getColor();
+            System.out.print(getLeft().getColor() + " " + getLeft().getKey() + " ");
+
+        } catch (NullPointerException e) {
+            System.out.print("NULL ");
+        }
+
+        try {
+            getRight().getColor();
+            System.out.print(getRight().getColor() + " " + getRight().getKey());
+
+        } catch (NullPointerException e) {
+            System.out.print(" NULL");
+        }
+        System.out.println();
+    }
+}

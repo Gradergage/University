@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RedBlack</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_options">Options</string>
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+    <string name="newTree">Новое дерево</string>
+    <string name="options">Руководство</string>
+    <string name="exit">Выход</string>
+    <string name="about"><i><b>Красно-чёрное дерево</b></i> (англ. Red-Black-Tree, RB-Tree) \n — это одно из самобалансирующихся двоичных деревьев поиска, гарантирующих логарифмический рост высоты дерева от числа узлов и быстро выполняющее основные операции дерева поиска: добавление, удаление и поиск узла. Сбалансированность достигается за счёт введения дополнительного атрибута узла дерева — «цвета». Этот атрибут может принимать одно из двух возможных значений — «чёрный» или «красный».</string>
+    <string name="add">Добавить</string>
+    <string name="hintKey">Ключ</string>
+    <string name="hintValue">Значение</string>
+    <string name="delete">Удалить</string>
+    <string name="error">Некорректный ключ или значение</string>
+    <string name="error1">Неправильный ключ</string>
+    <string name="title_activity_tree">Tree</string>
+
+</resources>
